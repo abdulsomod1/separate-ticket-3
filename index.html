@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mes commandes - Billetterie</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="phone">
+
+  <!-- ============ PAGE 1 : LISTE DES COMMANDES ============ -->
+  <div class="page" id="page-list">
+    <nav class="topnav">
+      <a class="nav-item" href="#"><span class="nav-icon">&#9670;</span> Mes commandes</a>
+      <a class="nav-item" href="#"><span class="nav-icon">&#128100;</span> Mon profil</a>
+      <a class="nav-item" href="#"><span class="nav-icon">&#9993;</span> Alertes E-mail</a>
+      <a class="nav-item" href="#"><span class="nav-icon">&#8635;</span> Espace Vendeur</a>
+    </nav>
+
+    <section class="panel">
+      <h1>MES COMMANDES</h1>
+      <p class="filter">Filtrer par : <b>Commandes en cours &#9662;</b></p>
+
+      <a class="order" href="#page-detail">
+        <span class="chevron">&#8250;</span>
+        <div class="order-title">COMMANDE N&deg; 420416707</div>
+        <div class="field">Date de la commande : <b>22/04/2026</b></div>
+        <div class="field">Montant total de la commande : <b>184.99 &euro;</b></div>
+        <div class="field">Statut paiement : <b>Sold&eacute;e</b></div>
+        <div class="field event">ENHYPEN</div>
+        <div class="resale"><span class="dot">&#8635;</span> Revente autoris&eacute;e <span class="muted-i">&#9432;</span></div>
+      </a>
+
+      <a class="order" href="#page-detail">
+        <span class="chevron">&#8250;</span>
+        <div class="order-title">COMMANDE N&deg; 420412124</div>
+        <div class="field">Date de la commande : <b>22/04/2026</b></div>
+        <div class="field">Montant total de la commande : <b>184.99 &euro;</b></div>
+        <div class="field">Statut paiement : <b>Sold&eacute;e</b></div>
+        <div class="field event">ENHYPEN</div>
+        <div class="resale"><span class="dot">&#8635;</span> Revente autoris&eacute;e <span class="muted-i">&#9432;</span></div>
+      </a>
+    </section>
+
+    <footer>
+      <a href="#">Conditions g&eacute;n&eacute;rales de vente</a> |
+      <a href="#">Politique de confidentialit&eacute;</a> | <a href="#">Cookies</a> |
+      <a href="#">G&eacute;rer mes cookies</a> | <a href="#">Mentions l&eacute;gales</a> |
+      <a href="#">Aide / FAQ / Contact</a> | <a href="#">Accessibilit&eacute; : non conforme</a>
+    </footer>
+  </div>
+
+  <!-- ============ PAGE 2 : DETAIL DE LA COMMANDE ============ -->
+  <div class="page" id="page-detail">
+    <header class="detail-header">
+      <a class="back" href="#page-list">&#8249;</a>
+      <span class="detail-title">COMMANDE N&deg; 420416707</span>
+    </header>
+
+    <div class="detail-body">
+      <div class="line">Date de la commande :<b>22/04/2026</b></div>
+      <div class="line">Montant total de la commande :<b>186.98 &euro;</b></div>
+      <div class="line">Statut paiement :<b>Sold&eacute;e</b></div>
+      <div class="line">Statut traitement :<b>EDITEE</b></div>
+      <div class="line">Mode d'obtention :<b>Billet digital</b></div>
+
+      <div class="address-card">
+        <h3>Adresse de livraison</h3>
+        <p>rhamatou DIALLO<br>77186 NOISIEL<br>FRANCE<br>diallorhamatou@gmail.com</p>
+      </div>
+
+      <div class="address-card">
+        <h3>Adresse de facturation</h3>
+        <p>rhamatou DIALLO<br>77186 NOISIEL<br>FRANCE</p>
+      </div>
+
+      <div class="info-box">
+        <span class="info-icon">&#9432;</span>
+        <div>
+          Vos billets dans votre smartphone avec l'application <b>Fan Wallet&trade;</b>
+          <ol>
+            <li>T&eacute;l&eacute;chargez l'app <a href="#">Fan Wallet&trade;</a> pour iPhone ou Android</li>
+            <li>Cliquez sur le lien de t&eacute;l&eacute;chargement de la commande ci-dessous</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="ticket-card">
+        <div class="ticket-head">
+          <span class="ticket-ico">&#127915;</span>
+          <div>
+            <div class="ticket-name">ENHYPEN</div>
+            <div class="ticket-date">samedi 27 f&eacute;vrier 2027 &agrave; 19:30</div>
+            <div class="ticket-venue">PLENITUDE ARENA</div>
+          </div>
+        </div>
+        <div class="ticket-type">1 PLACE - PLACES NUM&Eacute;ROT&Eacute;ES TARIF FAN CLUB - OR PART</div>
+        <div class="ticket-seat">M - RANG 8 - PLACE 167 - CHAISE</div>
+      </div>
+
+      <button class="btn btn-pink">Revendre mes billets</button>
+      <button class="btn btn-dark">T&eacute;l&eacute;charger les billets dans l'app</button>
+      <a class="invoice-link" href="#">Imprimer ma facture</a>
+    </div>
+
+    <footer>
+      <a href="#">Conditions g&eacute;n&eacute;rales de vente</a> |
+      <a href="#">Politique de confidentialit&eacute;</a> | <a href="#">Cookies</a> |
+      <a href="#">G&eacute;rer mes cookies</a> | <a href="#">Mentions l&eacute;gales</a> |
+      <a href="#">Aide / FAQ / Contact</a> | <a href="#">Accessibilit&eacute; : non conforme</a>
+    </footer>
+  </div>
+
+</div>
+</body>
+</html>

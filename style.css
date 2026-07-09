@@ -1,0 +1,207 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --pink: #e6007e;
+  --ink: #1a1a1a;
+  --line: #d9d9d9;
+  --bg: #f4f4f4;
+  --blue: #4a90d9;
+  --info-bg: #eef4fb;
+  --info-border: #cfe0f2;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+}
+.phone {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* --- Simple page switcher using :target --- */
+.page { display: none; }
+#page-list { display: block; }              /* default page */
+#page-detail:target { display: block; }
+.phone:has(#page-detail:target) #page-list { display: none; }
+
+/* ============ TOP NAV (list page) ============ */
+.topnav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 12px;
+  padding: 22px 20px 26px;
+  border-bottom: 1px solid var(--line);
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-icon {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+/* ============ ORDERS PANEL ============ */
+.panel {
+  margin: 18px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  padding: 20px 18px 26px;
+}
+.panel h1 { font-size: 20px; letter-spacing: .5px; margin-bottom: 22px; }
+.filter { text-align: right; font-size: 13px; color: #555; margin-bottom: 22px; }
+.filter b { color: var(--ink); }
+
+.order {
+  display: block;
+  position: relative;
+  padding-bottom: 26px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+.order + .order { border-top: 1px solid var(--line); padding-top: 24px; }
+.order-title { font-size: 17px; font-weight: 700; letter-spacing: .5px; margin-bottom: 16px; }
+
+.field {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 12px;
+}
+.field b { color: var(--ink); }
+.field.event { font-weight: 700; color: var(--ink); }
+
+.resale {
+  display: flex; align-items: center; gap: 8px;
+  color: var(--pink); font-weight: 700; font-size: 13px;
+  margin-top: 4px;
+}
+.resale .dot {
+  display: inline-flex; width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid var(--pink); align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 700;
+}
+.muted-i { color: #999; }
+.chevron {
+  position: absolute; right: -6px; top: 42%;
+  color: var(--blue); font-size: 34px; font-weight: 300; line-height: 1;
+}
+
+/* ============ DETAIL PAGE ============ */
+.detail-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 18px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.back { font-size: 26px; color: var(--ink); text-decoration: none; line-height: 1; }
+.detail-title { font-size: 17px; font-weight: 700; letter-spacing: .5px; }
+
+.detail-body { padding: 8px 18px 24px; }
+.line {
+  display: flex; justify-content: space-between; gap: 10px;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 2px;
+  font-size: 14px; color: #555;
+}
+.line b { color: var(--ink); }
+
+.address-card {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 16px;
+  margin-top: 18px;
+}
+.address-card h3 { font-size: 15px; margin-bottom: 12px; }
+.address-card p { font-size: 13px; color: #666; line-height: 1.7; }
+
+.info-box {
+  display: flex; gap: 12px;
+  background: var(--info-bg);
+  border: 1px solid var(--info-border);
+  border-radius: 6px;
+  padding: 16px;
+  margin-top: 20px;
+  font-size: 13px; color: #333; line-height: 1.6;
+}
+.info-icon {
+  color: var(--blue); font-size: 18px; flex-shrink: 0;
+}
+.info-box ol { margin: 8px 0 0 18px; }
+.info-box li { margin-bottom: 6px; }
+.info-box a { color: var(--blue); }
+
+.ticket-card {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 18px 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+.ticket-head {
+  display: flex; align-items: center; gap: 14px;
+  text-align: left;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
+}
+.ticket-ico { font-size: 30px; color: var(--blue); }
+.ticket-name { font-weight: 700; font-size: 16px; }
+.ticket-date { font-size: 12px; color: #666; }
+.ticket-venue { font-size: 13px; color: #333; }
+.ticket-type { font-weight: 700; font-size: 13px; margin-bottom: 14px; }
+.ticket-seat {
+  font-size: 12px; color: #555; letter-spacing: .5px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 14px; font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 16px;
+}
+.btn-pink { background: var(--pink); }
+.btn-dark { background: var(--ink); }
+
+.invoice-link {
+  display: block;
+  text-align: right;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  padding: 20px;
+  line-height: 1.9;
+  border-top: 1px solid var(--line);
+}
+footer a { color: #777; text-decoration: underline; }
