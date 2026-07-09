@@ -107,9 +107,13 @@ body {
 
 /* ============ DETAIL PAGE ============ */
 .detail-header {
+  position: sticky;
+  top: 0;
   display: flex; align-items: center; gap: 10px;
   padding: 18px 18px;
   border-bottom: 1px solid var(--line);
+  background: #fff;
+  z-index: 20;
 }
 .back { font-size: 26px; color: var(--ink); text-decoration: none; line-height: 1; }
 .detail-title { font-size: 17px; font-weight: 700; letter-spacing: .5px; }
